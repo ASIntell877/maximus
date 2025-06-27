@@ -40,7 +40,7 @@ def search_index(query_embedding, k=MAX_CHUNKS):
 
 # === Helper: Load chunk text from file ===
 def get_chunk_text(meta):
-    chunk_file = f"data/chunks/{meta['filename']}
+    chunk_file = os.path.join("data", "chunks", meta["filename"])
     with open(chunk_file, 'r', encoding='utf-8') as f:
         data = json.load(f)
     return data[meta["chunk_id"]]["text"]
