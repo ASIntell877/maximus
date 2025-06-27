@@ -112,8 +112,10 @@ if submit and query:
                 temperature=0.7,
                 max_tokens=700
             )
-		st.markdown("### ✨ Response:")
-		st.markdown(response.choices[0].message.content)
+            
+            # <-- Display the response here inside try block
+            st.markdown("### ✨ Response:")
+            st.markdown(response.choices[0].message.content)
 
         except Exception as e:
             st.error(f"Error: {e}")
