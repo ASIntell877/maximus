@@ -1,0 +1,17 @@
+# Ignore Python cache files
+__pycache__/
+*.pyc
+
+# Ignore virtual environment
+venv/
+
+# Ignore raw data (optional)
+data/raw/
+
+# Ignore secret keys (never commit them!)
+mkey.txt
+.env
+
+# Ignore system files
+.DS_Store
+Thumbs.db
