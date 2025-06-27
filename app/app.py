@@ -113,13 +113,5 @@ if submit and query:
                 max_tokens=700
             )
 
-            st.markdown("### ✨ Response:")
-            st.markdown(response.choices[0].message.content)
-
-            st.markdown("---")
-            st.markdown("##### 📚 Sources:")
-            for meta in matches:
-                st.markdown(f"- *{meta['source']}*, chunk #{meta['chunk_id']}")
-
         except Exception as e:
             st.error(f"Error: {e}")
